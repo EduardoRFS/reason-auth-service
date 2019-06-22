@@ -1,0 +1,4 @@
+(executable
+  (name AuthService)
+  (public_name AuthService)
+  (libraries console.lib))

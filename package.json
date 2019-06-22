@@ -1,0 +1,33 @@
+{
+  "name": "reason-auth-service",
+  "version": "0.0.0",
+  "repository": "git@github.com:EduardoRFS/reason-auth-service.git",
+  "author": "EduardoRFS <theeduardorfs@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "esy": {
+    "build": "refmterr dune build -p #{self.name}",
+    "NOTE": "Optional release Section. Customizes result of `esy release`",
+    "release": {
+      "bin": [
+        "AuthService"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "esy x AuthService",
+    "doc": "esy dune build @doc"
+  },
+  "dependencies": {
+    "@opam/dune": "*",
+    "@reason-native/console": "*",
+    "@esy-ocaml/reason": ">= 3.4.0 < 3.5.0",
+    "refmterr": "*",
+    "ocaml": "~4.6.0"
+  },
+  "devDependencies": {
+    "@opam/merlin": "*",
+    "ocaml": "~4.6.0",
+    "@opam/odoc": "*"
+  }
+}
