@@ -1,4 +1,5 @@
 (executable
   (name AuthService)
   (public_name AuthService)
-  (libraries console.lib))
+  (libraries lib opium redis redis-lwt base stdio lwt)
+  (preprocess (pps ppx_let)))

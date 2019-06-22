@@ -19,11 +19,18 @@
     "doc": "esy dune build @doc"
   },
   "dependencies": {
-    "@opam/dune": "*",
-    "@reason-native/console": "*",
     "@esy-ocaml/reason": ">= 3.4.0 < 3.5.0",
-    "refmterr": "*",
-    "ocaml": "~4.6.0"
+    "@opam/base": "v0.12.2",
+    "@opam/dune": "*",
+    "@opam/lwt": "4.2.1",
+    "@opam/num": "1.1",
+    "@opam/opium": "0.17.1",
+    "@opam/ppx_let": "v0.12.0",
+    "@opam/redis": "0.3.6",
+    "@opam/redis-lwt": "0.3.6",
+    "@reason-native/console": "*",
+    "ocaml": "~4.6.0",
+    "refmterr": "*"
   },
   "devDependencies": {
     "@opam/merlin": "*",
