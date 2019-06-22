@@ -8,33 +8,32 @@
   "esy": {
     "build": "refmterr dune build -p #{self.name}",
     "NOTE": "Optional release Section. Customizes result of `esy release`",
-    "release": {
-      "bin": [
-        "AuthService"
-      ]
-    }
+    "release": { "bin": [ "AuthService" ] }
   },
-  "scripts": {
-    "test": "esy x AuthService",
-    "doc": "esy dune build @doc"
-  },
+  "scripts": { "test": "esy x AuthService", "doc": "esy dune build @doc" },
   "dependencies": {
     "@esy-ocaml/reason": ">= 3.4.0 < 3.5.0",
     "@opam/base": "v0.12.2",
+    "@opam/cryptokit": "1.13",
     "@opam/dune": "*",
+    "@opam/jwto": "0.2.0",
     "@opam/lwt": "4.2.1",
     "@opam/num": "1.1",
     "@opam/opium": "0.17.1",
+    "@opam/ppx_deriving": "4.3",
+    "@opam/ppx_fields_conv": "v0.12.0",
     "@opam/ppx_let": "v0.12.0",
+    "@opam/ppx_sexp_conv": "v0.12.0",
     "@opam/redis": "0.3.6",
     "@opam/redis-lwt": "0.3.6",
+    "@opam/yojson": "1.7.0",
     "@reason-native/console": "*",
-    "ocaml": "~4.6.0",
+    "ocaml": "~4.7.0",
     "refmterr": "*"
   },
   "devDependencies": {
     "@opam/merlin": "*",
-    "ocaml": "~4.6.0",
+    "ocaml": "~4.7.0",
     "@opam/odoc": "*"
   }
 }
