@@ -45,6 +45,7 @@ let decode_algorithm = header => {
 };
 let decode_json = base64 => {
   let%map string = decode_base64(base64);
+  // TODO: not safe
   Yojson.from_string(string);
 };
 let encode_json = json => Yojson.to_string(json) |> encode_base64;
@@ -76,6 +77,11 @@ let verify = (~secret, t) =>
   | Ok(signature) => String.equal(signature, t.signature)
   | Error(_) => false
   };
+let decode_verify = (~secret, token) => {
+  let%bind t = decode(token);
+  let%bind signature = sign(~secret, t);
+  String.equal(signature, t.signature) ? Ok(t) : Error("Invalid signature");
+};
 let encode = (~secret, header, payload) => {
   let%bind root = {
     let%bind header = encode_json(header);

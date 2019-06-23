@@ -10,6 +10,7 @@ let decode: string => result(t, string);
 let encode:
   (~secret: secret, header, payload) => result((t, string), string);
 let verify: (~secret: secret, t) => bool;
+let decode_verify: (~secret: secret, string) => result(t, string);
 
 let header_of_t: t => Yojson.t;
 let payload_of_t: t => Yojson.t;

@@ -1,4 +1,6 @@
 (executable
   (name AuthService)
+  (modules AuthService)
   (public_name AuthService)
-  (libraries lib opium))
+  (libraries lib opium)
+  (preprocess (pps ppx_let ppx_deriving ppx_fields_conv ppx_sexp_conv)))

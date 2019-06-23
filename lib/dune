@@ -2,5 +2,5 @@
   (name lib)
   (flags (-w -40 -w +26))
   (public_name reason-auth-service)
-  (libraries console.lib opium redis redis-lwt base stdio lwt jwto yojson cryptokit)
+  (libraries console.lib opium redis redis-lwt base stdio lwt yojson cryptokit)
   (preprocess (pps ppx_let ppx_deriving ppx_fields_conv)))
